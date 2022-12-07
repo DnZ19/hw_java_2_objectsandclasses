@@ -8,6 +8,8 @@ public class Ingredient {
 
     //constructor
 
+    public Ingredient(){}
+
     public Ingredient(double amount, String units, String ingredientName) {
         this.amount = amount;
         this.units = units;
