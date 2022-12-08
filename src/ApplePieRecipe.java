@@ -6,41 +6,23 @@ public class ApplePieRecipe {
     ArrayList<Ingredient> ingredients = new ArrayList<>();
     ArrayList<CookingDirection> steps = new ArrayList<>();
 
-    Ingredient ongezoutenBoter;
-    Ingredient witteBastardSuiker;
-    Ingredient zelfRijzendBakmeel;
-    Ingredient ei;
-    Ingredient vanilleSuiker;
-    Ingredient zout;
-    Ingredient zoetZureAppels;
-    Ingredient kristalSuiker;
-    Ingredient kaneel;
-    Ingredient paneerMeel;
+    Ingredient ongezoutenBoter, witteBastardSuiker, zelfRijzendBakmeel, ei, vanilleSuiker, zout, zoetZureAppels, kristalSuiker, kaneel, paneerMeel;
 
-    CookingDirection step1;
-    CookingDirection step2;
-    CookingDirection step3;
-    CookingDirection step4;
-    CookingDirection step5;
-    CookingDirection step6;
-    CookingDirection step7;
-    CookingDirection step8;
-    CookingDirection step9;
-    CookingDirection step10;
+    CookingDirection step1, step2, step3, step4, step5, step6, step7, step8, step9, step10;
 
     //Constructor
 
     public ApplePieRecipe() {
-       ingredients.add(ongezoutenBoter = new Ingredient(200, " gram", "ongezouten roomboter"));
-       ingredients.add(witteBastardSuiker = new Ingredient(200, " gram", "witte bastard suiker"));
-       ingredients.add(zelfRijzendBakmeel = new Ingredient(400, " gram", "zelfrijzend bakmeel"));
+       ingredients.add(ongezoutenBoter = new Ingredient(200, "gram", "ongezouten roomboter"));
+       ingredients.add(witteBastardSuiker = new Ingredient(200, "gram", "witte bastard suiker"));
+       ingredients.add(zelfRijzendBakmeel = new Ingredient(400, "gram", "zelfrijzend bakmeel"));
        ingredients.add(ei = new Ingredient(1, " stuk(s)", "ei"));
-       ingredients.add(vanilleSuiker = new Ingredient(8, " gram", "vanillesuiker"));
+       ingredients.add(vanilleSuiker = new Ingredient(8, "gram", "vanillesuiker"));
        ingredients.add(zout = new Ingredient(1, " snuf", "zout"));
        ingredients.add(zoetZureAppels = new Ingredient(1.5, " kilo", "zoet zure appels"));
-       ingredients.add(kristalSuiker = new Ingredient(75, " gram", "kristal suiker"));
+       ingredients.add(kristalSuiker = new Ingredient(75, "gram", "kristal suiker"));
        ingredients.add(kaneel = new Ingredient(3, " theelepels", "kaneel"));
-       ingredients.add(paneerMeel = new Ingredient(15, " gram", "paneermeel"));
+       ingredients.add(paneerMeel = new Ingredient(15, "gram", "paneermeel"));
 
        steps.add(step1 = new CookingDirection("Verwarm de oven van te voren op 170 graden Celsius (boven en onderwarmte)"));
        steps.add(step2 = new CookingDirection("Klop het ei los en verdeel deze in twee delen. De ene helft is voor het deeg, het andere deel is voor het bestrijken van de appeltaart."));
@@ -53,12 +35,16 @@ public class ApplePieRecipe {
        steps.add(step9 = new CookingDirection("Leg de stroken kuislings op de appeltaart. Met wat extra deegstroken werk je de rand rondom af. Gebruik het overgebleven ei om de bovenkant van het deeg te bestrijken"));
        steps.add(step10 = new CookingDirection("Zet de taart iets onder het midden van de oven. Bak de taart in 60 minuten op 170 graden Celsius (boven en onderwarmte) gaar en goudbruin."));
 
+        System.out.println("Apple Pie Recipe:");
+        System.out.println("-----------------");
+
     }
+
 
     public void printIngredients() {
         System.out.println("Ingredients: ");
         for (Ingredient ingredient : ingredients) {
-            System.out.println("- " + ingredient);
+            System.out.println("- " + Math.round(ingredient.getAmount()) + " " + ingredient.getUnits() + " " + ingredient.getIngredientName());
         }
     }
 
@@ -67,6 +53,8 @@ public class ApplePieRecipe {
         for (CookingDirection step : steps) {
             System.out.println("- " + step);
         }
+        System.out.println("----------------------------------------------------------------");
+        System.out.println("----------------------------------------------------------------");
     }
 
 
